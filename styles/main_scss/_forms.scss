@@ -1,0 +1,620 @@
+/**************************************** FORMS ****************************************/
+
+form{
+    
+    background-color: white;
+    margin: 0px;
+    padding: 20px;
+    
+    &> :first-child{
+        
+        margin-top: 0px;
+        
+    }
+    
+    .error{
+        
+        color: $red-dk1;
+        font-size: 14px;
+        text-align: center;
+        
+    }
+    
+    fieldset{
+        
+        border: none;
+        margin: 0px 40px;
+        padding: 0px;
+        
+        // Styles for inputs
+        
+        input[type=date],
+        input[type=datetime-local],
+        input[type=email],
+        input[type=month],
+        input[type=number],
+        input[type=password],
+        input[type=search],
+        input[type=tel],
+        input[type=text],
+        input[type=time],
+        input[type=url],
+        input[type=week],
+        select,
+        textarea{
+            
+            // Styles for validation errors
+            
+            &.invalid{
+                
+                border-color: $red-dk1;
+                box-shadow: 0px 0px 5px $red-dk1;
+                
+            }
+            
+        }
+        
+        // Styles for checkbox and radio button groups
+        
+        .checkbox-radio-container{
+            
+            display: table;
+            padding: 5px 0px;
+            
+            label{
+                
+                display: table-cell;
+                padding: 0px 10px;
+                vertical-align: middle;
+                
+            }
+            
+        }
+        
+        // Keep rows of differently sized fields aligned
+        
+        .field-row{
+            
+            // Prevent field row from collapsing
+            
+            &:after{
+                
+                clear: both;
+                content: "";
+                display: block;
+                
+            }
+            
+        }
+        
+        // Options for having 1, 2, or 3 fields on a row
+        
+        .field-33,
+        .field-50,
+        .field-100{
+            
+            box-sizing: border-box;
+            display: inline-block;
+            float: left;
+            font-size: 0px;
+            padding: 5px 10px;
+            position: relative;
+            text-align: left;
+            
+            // Styles for required fields
+            
+            &.required{
+                
+                label{
+                    
+                    &:after{
+                        
+                        color: $red-dk1;
+                        content: "(required)";
+                        float: right;
+                        font-style: italic;
+                        font-weight: normal;
+                        
+                    }
+                    
+                }
+                
+            }
+            
+            // Styles for normal inputs inside field
+            
+            input[type=date],
+            input[type=datetime-local],
+            input[type=email],
+            input[type=month],
+            input[type=number],
+            input[type=password],
+            input[type=search],
+            input[type=tel],
+            input[type=text],
+            input[type=time],
+            input[type=url],
+            input[type=week],
+            select,
+            textarea{
+                
+                box-sizing: border-box;
+                width: 100%;
+                
+                &.time-with-timezone{
+                    
+                    margin-right: 10px;
+                    width: calc(100% - 100px);
+                    
+                }
+                
+                &.timezone{
+                    
+                    width: 90px;
+                    
+                }
+                
+            }
+            
+            // Styles for more than one picklist as part of field
+            
+            select.input-25,
+            select.input-33,
+            select.input-50{
+                
+                display: inline-block;
+                margin: 0px 5px;
+                
+                &:first-of-type{
+                    
+                    margin-left: 0px;
+                    
+                }
+                
+                &:last-of-type{
+                    
+                    margin-right: 0px;
+                    
+                }
+                
+            }
+            
+            select.input-25{
+                
+                width: calc((100% - 30px) / 4);
+                
+            }
+            
+            select.input-33{
+                
+                width: calc((100% - 20px) / 3);
+                
+            }
+            
+            select.input-50{
+                
+                width: calc((100% - 10px) / 2);
+                
+            }
+            
+            // Set width for fields with icons inside form
+            
+            .field-icon{
+                
+                &+ input[type=date],
+                &+ input[type=datetime-local],
+                &+ input[type=email],
+                &+ input[type=month],
+                &+ input[type=number],
+                &+ input[type=password],
+                &+ input[type=search],
+                &+ input[type=tel],
+                &+ input[type=text],
+                &+ input[type=time],
+                &+ input[type=url],
+                &+ input[type=week],
+                &+ select{
+                    
+                    width: calc(100% - 42px);
+                    
+                }
+                
+            }
+            
+        }
+        
+        // Options for having 1, 2, or 3 fields on a row
+        
+        .field-33{
+            
+            width: calc(100% / 3);
+            
+        }
+        
+        .field-50{
+            
+            width: 50%;
+            
+        }
+        
+        .field-100{
+            
+            width: 100%;
+            
+        }
+        
+    }
+    
+    a.form-link,
+    button.form-link{
+        
+        background-color: transparent;
+        border: none;
+        border-radius: 0px;
+        color: $primary-dk1;
+        display: block;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 10px;
+        padding: 0px;
+        
+        &:hover{
+            
+            text-decoration: underline;
+            
+        }
+        
+    }
+    
+}
+
+// Keep buttons centered
+
+.button-row{
+    
+    margin: 30px 10px 10px 10px;
+    text-align: center;
+    
+}
+
+
+
+/**************************************** FIELD ICONS ****************************************/
+
+// Styles for field icon container
+
+.field-icon{
+    
+    background-color: $gray-lt5;
+    border-color: $gray-lt2;
+    border-radius: 2px 0px 0px 2px;
+    border-style: solid;
+    border-width: 1px 0px 1px 1px;
+    color: $gray;
+    cursor: default;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    width: 40px;
+    
+    // Override line height for Font Awesome icons
+    
+    .fa{
+        
+        line-height: 38px !important;
+        
+    }
+    
+    // Styles for inputs following field icon
+    
+    &+ input[type=date],
+    &+ input[type=datetime-local],
+    &+ input[type=email],
+    &+ input[type=month],
+    &+ input[type=number],
+    &+ input[type=password],
+    &+ input[type=search],
+    &+ input[type=tel],
+    &+ input[type=text],
+    &+ input[type=time],
+    &+ input[type=url],
+    &+ input[type=week],
+    &+ select{
+        
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        box-sizing: border-box;
+        line-height: 40px;
+        width: 358px;
+        
+    }
+    
+}
+
+
+
+/**************************************** MOBILE ****************************************/
+
+// Tablet portrait and smaller
+
+@media only screen and (max-width: 768px){
+    
+    form{
+        
+        // Decrease side margin for fieldsets
+        
+        fieldset{
+            
+            margin: 0px 20px;
+            
+            // Max two fields per row
+            
+            .field-33{
+                
+                width: 50%;
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+// Phone landscape and smaller
+
+@media only screen and (max-width: 480px){
+    
+    form{
+        
+        // Decrease side margin for fieldsets
+        
+        fieldset{
+            
+            margin: 0px;
+            
+            // Only one field per row
+            
+            .field-33,
+            .field-50,
+            .field-100{
+                
+                width: 100%;
+                
+                // Only one picklist per row
+                
+                select.input-25,
+                select.input-33,
+                select.input-50{
+                    
+                    margin: 0px;
+                    width: 100%;
+                    
+                    &:not(:last-of-type){
+                        
+                        margin-bottom: 10px;
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+        a.button,
+        button,
+        input[type=button],
+        input[type=reset],
+        input[type=submit]{
+            
+            width: calc(100% - 20px);
+            
+            &:not(:last-of-type){
+                
+                margin-bottom: 10px;
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+
+
+/**************************************** MOBILE GRID ****************************************/
+
+// When 2-col grid col flex size is tablet portrait and smaller, apply tablet portrait effects to content
+
+@media only screen and (max-width: 1098px) and (min-width: 768px){
+    
+    .grid-container-1-3 .grid-col-flex,
+    .grid-container-3-1 .grid-col-flex{
+        
+        form{
+            
+            // Decrease side margin for fieldsets
+            
+            fieldset{
+                
+                margin: 0px 20px;
+                
+                // Max two fields per row
+                
+                .field-33{
+                    
+                    width: 50%;
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+// When 2-col grid col flex size is phone landscape and smaller, apply phone landscape effects to content
+
+@media only screen and (max-width: 810px) and (min-width: 768px){
+    
+    .grid-container-1-3 .grid-col-flex,
+    .grid-container-3-1 .grid-col-flex{
+        
+        form{
+            
+            // Decrease side margin for fieldsets
+            
+            fieldset{
+                
+                margin: 0px;
+                
+                // Only one field per row
+                
+                .field-33,
+                .field-50,
+                .field-100{
+                    
+                    width: 100%;
+                    
+                    // Only one picklist per row
+                    
+                    select.input-25,
+                    select.input-33,
+                    select.input-50{
+                        
+                        margin: 0px;
+                        width: 100%;
+                        
+                        &:not(:last-of-type){
+                            
+                            margin-bottom: 10px;
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+            
+            a.button,
+            button,
+            input[type=button],
+            input[type=reset],
+            input[type=submit]{
+                
+                width: calc(100% - 20px);
+                
+                &:not(:last-of-type){
+                    
+                    margin-bottom: 10px;
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+// When 3-col grid col flex size is tablet portrait and smaller, apply tablet portrait effects to content
+
+@media only screen and (max-width: 1368px) and (min-width: 1038px){
+    
+    .grid-container-1-3-1 .grid-col-flex{
+        
+        form{
+            
+            // Decrease side margin for fieldsets
+            
+            fieldset{
+                
+                margin: 0px 20px;
+                
+                // Max two fields per row
+                
+                .field-33{
+                    
+                    width: 50%;
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+// When 3-col grid col flex size is phone landscape and smaller, apply phone landscape effects to content
+
+@media only screen and (max-width: 1080px) and (min-width: 1038px){
+    
+    .grid-container-1-3-1 .grid-col-flex{
+        
+        form{
+            
+            // Decrease side margin for fieldsets
+            
+            fieldset{
+                
+                margin: 0px;
+                
+                // Only one field per row
+                
+                .field-33,
+                .field-50,
+                .field-100{
+                    
+                    width: 100%;
+                    
+                    // Only one picklist per row
+                    
+                    select.input-25,
+                    select.input-33,
+                    select.input-50{
+                        
+                        margin: 0px;
+                        width: 100%;
+                        
+                        &:not(:last-of-type){
+                            
+                            margin-bottom: 10px;
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+            
+            a.button,
+            button,
+            input[type=button],
+            input[type=reset],
+            input[type=submit]{
+                
+                width: calc(100% - 20px);
+                
+                &:not(:last-of-type){
+                    
+                    margin-bottom: 10px;
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}

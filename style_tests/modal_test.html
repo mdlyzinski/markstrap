@@ -1,0 +1,182 @@
+<html>
+    
+    <head>
+        
+        <title>Modal Test</title>
+        
+        <meta name="viewport" content="width=device-width"/>
+        
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="../scripts/main.js"></script>
+        
+    </head>
+    
+    <body>
+        
+        <h1>Modals</h1>
+        
+        <h4 class="underline-color">Message Modals</h4>
+        <div class="modal" style="display: block; height: 400px; position: relative;">
+            <div class="alert-modal">
+                <h3>General Message</h3>
+                <div>
+                    <p>This is a sample sentence that contains exactly ten words. This is a sample sentence that contains exactly ten words. This is a sample sentence that contains exactly ten words.</p>
+                </div>
+                <div class="button-row">
+                    <button class="close">Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal" style="display: block; height: 500px; position: relative;">
+            <div class="alert-modal">
+                <h3>Success Message</h3>
+                <div class="success">
+                    <p>This is a sample sentence that contains exactly ten words. This is a sample sentence that contains exactly ten words. This is a sample sentence that contains exactly ten words.</p>
+                </div>
+                <div class="button-row">
+                    <button class="close">Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal" style="display: block; height: 600px; position: relative;">
+            <div class="alert-modal">
+                <h3>Warning Message</h3>
+                <div class="warning">
+                    <p>This is a sample sentence that contains exactly ten words. This is a sample sentence that contains exactly ten words. This is a sample sentence that contains exactly ten words.</p>
+                </div>
+                <div class="button-row">
+                    <button>Continue</button>
+                    <button class="close">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal" style="display: block; height: 600px; position: relative;">
+            <div class="alert-modal">
+                <h3>Error Message</h3>
+                <div class="error">
+                    <p>This is a sample sentence that contains exactly ten words. This is a sample sentence that contains exactly ten words. This is a sample sentence that contains exactly ten words.</p>
+                </div>
+                <div class="button-row">
+                    <button>Retry</button>
+                    <button class="close">Cancel</button>
+                </div>
+            </div>
+        </div>
+            
+        <h4 class="underline-color">Login Modals</h4>
+        <div class="modal" style="display: block; height: 650px; position: relative;">
+            <div class="form-modal">
+                <h3>Register<button class="exit"></button></h3>
+                <form>
+                    <fieldset>
+                        <div class="field-row">
+                            <div class="field-100 required">
+                                <label for="FirstName1">Name</label>
+                                <span class="field-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                <input type="text" id="FirstName1" placeholder="First Last">
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="field-100 required">
+                                <label for="Email1">Email</label>
+                                <span class="field-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                <input type="text" class="email" id="Email1" placeholder="sample@email.com">
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="field-100 required">
+                                <label for="Password1">Password</label>
+                                <span class="field-icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                                <input type="password" class="password" id="Password1" placeholder="********">
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="field-100 required">
+                                <label for="ConfirmPassword1">Confirm Password</label>
+                                <span class="field-icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                                <input type="password" class="password" id="ConfirmPassword1" placeholder="********">
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="field-100">
+                                <div class="checkbox-radio-container">
+                                    <input type="checkbox" id="Terms" value="Terms">
+                                    <label for="Terms">I agree to the <a href="#" class="color">Terms & Conditions</a></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="field-100">
+                                <div class="checkbox-radio-container">
+                                    <input type="checkbox" id="NewsLetters" value="NewsLetters">
+                                    <label for="NewsLetters">Sign me up to receive weekly newsletters</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="button-row">
+                        <button>Register</button>
+                        <button class="close">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal" style="display: block; height: 400px; position: relative;">
+            <div class="form-modal">
+                <h3>Login<button class="exit"></button></h3>
+                <form>
+                    <fieldset>
+                        <div class="field-row">
+                            <div class="field-100 required">
+                                <label for="Email2">Email</label>
+                                <span class="field-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                <input type="text" class="email" id="Email2" placeholder="sample@email.com">
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="field-100 required">
+                                <label for="Password2">Password</label>
+                                <span class="field-icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                                <input type="password" class="password" id="Password2" placeholder="********">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="button-row">
+                        <button>Login</button>
+                        <button close="close">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal" style="display: block; height: 600px; position: relative;">
+            <div class="message-modal">
+                <h3>Send Message<button class="exit"></button></h3>
+                <form>
+                    <fieldset>
+                        <div class="field-row">
+                            <div class="field-100 required">
+                                <label>To:</label>
+                                <span class="field-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                <input type="text" class="email" id="To" placeholder="sample@email.com">
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="field-100 required">
+                                <label>Message:</label>
+                                <textarea maxlength="1000" placeholder="Enter your message here..."></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="button-row">
+                        <button>Send</button>
+                        <button close="close">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </body>
+    
+</html>

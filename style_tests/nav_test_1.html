@@ -1,0 +1,178 @@
+<html>
+    
+    <head>
+        
+        <title>Navigation Test 1</title>
+        
+        <meta name="viewport" content="width=device-width"/>
+        
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="../scripts/main.js"></script>
+        
+    </head>
+    
+    <body>
+        
+        <nav class="top-nav">
+            <div class="nav with-sub-nav">
+                <div class="nav-left">
+                    <div class="nav-table">
+                        <a class="title">Website Title</a>
+                        <button class="fa fa-bars mobile-menu-button" aria-hidden="true"></button>
+                        <div class="search-bar autocomplete-field" id="autocomplete1">
+                            <input type="search" placeholder="Search...">
+                            <button class="fa fa-search"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="nav-table">
+                        <div class="nav-links">
+                            <a class="active">Link 1</a>
+                            <a>Link 2</a>
+                            <a>Link 3</a>
+                            <a>Link 4</a>
+                            <div class="dropdown">
+                                <a class="sub">Link 5</a>
+                                <div class="submenu">
+                                    <a>Sublink 1</a>
+                                    <a>Sublink 2</a>
+                                    <a>Sublink 3</a>
+                                    <a>Sublink 4</a>
+                                    <a>Sublink 5</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sub-nav">
+                <div class="nav-left">
+                    <div class="nav-table">
+                        <div class="nav-links">
+                            <a class="active">Sublink 1</a>
+                            <a>Sublink 2</a>
+                            <a>Sublink 3</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="nav-table">
+                        <div class="nav-links">
+                            <div class="dropdown">
+                                <a class="sub"><i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;Mark Lyzinski</a>
+                                <div class="submenu">
+                                    <a>Sub-sublink 1</a>
+                                    <a>Sub-sublink 2</a>
+                                    <a>Sub-sublink 3</a>
+                                    <a>Sub-sublink 4</a>
+                                    <a>Sub-sublink 5</a>
+                                </div>
+                            </div>
+                            <a>Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-top">
+                <div class="mobile-nav-links">
+                    <div class="dropdown">
+                        <a><i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;Mark Lyzinski</a>
+                        <div class="submenu">
+                            <a>Sublink 1</a>
+                            <a>Sublink 2</a>
+                            <a>Sublink 3</a>
+                            <a>Sublink 4</a>
+                            <a>Sublink 5</a>
+                        </div>
+                    </div>
+                    <a class="active">Link 1</a>
+                    <a>Link 2</a>
+                    <a>Link 3</a>
+                    <a>Link 4</a>
+                    <div class="dropdown">
+                        <a>Link 5</a>
+                        <div class="submenu">
+                            <a>Sublink 1</a>
+                            <a>Sublink 2</a>
+                            <a class="active">Sublink 3</a>
+                            <a>Sublink 4</a>
+                            <a>Sublink 5</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <nav class="bottom-nav">
+            <div class="mobile-menu-bottom">
+                <button class="link-20"><i class="fa fa-user-circle-o" aria-hidden="true"></i></button>
+                <a class="link-20"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+                <a class="link-20"><i class="fa fa-usd" aria-hidden="true"></i></a>
+                <a class="link-20"><i class="fa fa-cog" aria-hidden="true"></i></a>
+                <a class="link-20"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
+            </div>
+        </nav>
+        
+        <script>
+            $('#autocomplete1').setAutocompleteSource([
+                {text: 'Alabama', subtext: '100'},
+                {text: 'Alaska', subtext: '100'},
+                {text: 'Arizona', subtext: '100'},
+                {text: 'Arkansas', subtext: '100'},
+                {text: 'California', subtext: '100'},
+                {text: 'Colorado', subtext: '100'},
+                {text: 'Connecticut', subtext: '100'},
+                {text: 'Delaware', subtext: '100'},
+                {text: 'Florida', subtext: '100'},
+                {text: 'Georgia', subtext: '100'},
+                {text: 'Hawaii', subtext: '100'},
+                {text: 'Idaho', subtext: '100'},
+                {text: 'Illinois', subtext: '100'},
+                {text: 'Indiana', subtext: '100'},
+                {text: 'Iowa', subtext: '100'},
+                {text: 'Kansas', subtext: '100'},
+                {text: 'Kentucky', subtext: '100'},
+                {text: 'Louisiana', subtext: '100'},
+                {text: 'Maine', subtext: '100'},
+                {text: 'Maryland', subtext: '100'},
+                {text: 'Massachusetts', subtext: '100'},
+                {text: 'Michigan', subtext: '100'},
+                {text: 'Minnesota', subtext: '100'},
+                {text: 'Mississippi', subtext: '100'},
+                {text: 'Missouri', subtext: '100'},
+                {text: 'Montana', subtext: '100'},
+                {text: 'Nebraska', subtext: '100'},
+                {text: 'Nevada', subtext: '100'},
+                {text: 'New Hampshire', subtext: '100'},
+                {text: 'New Jersey', subtext: '100'},
+                {text: 'New Mexico', subtext: '100'},
+                {text: 'New York', subtext: '100'},
+                {text: 'North Carolina', subtext: '100'},
+                {text: 'North Dakota', subtext: '100'},
+                {text: 'Ohio', subtext: '100'},
+                {text: 'Oklahoma', subtext: '100'},
+                {text: 'Oregon', subtext: '100'},
+                {text: 'Pennsylvania', subtext: '100'},
+                {text: 'Rhode Island', subtext: '100'},
+                {text: 'South Carolina', subtext: '100'},
+                {text: 'South Dakota', subtext: '100'},
+                {text: 'Tennessee', subtext: '100'},
+                {text: 'Texas', subtext: '100'},
+                {text: 'Utah', subtext: '100'},
+                {text: 'Vermont', subtext: '100'},
+                {text: 'Virginia', subtext: '100'},
+                {text: 'Washington', subtext: '100'},
+                {text: 'West Virginia', subtext: '100'},
+                {text: 'Wisconsin', subtext: '100'},
+                {text: 'Wyoming', subtext: '100'}
+            ]);
+        </script>
+        
+    </body>
+    
+</html>

@@ -1,0 +1,585 @@
+/**************************************** CHARACTER COUNTS ****************************************/
+
+// Styles for character count for inputs
+
+.character-count{
+    
+    color: $primary-dk4;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 0px;
+    text-align: left;
+    
+}
+
+
+
+/**************************************** DATE PICKERS ****************************************/
+
+// Styles for selecting dates for date fields
+
+.date-picker{
+    
+    background-color: white;
+    border-collapse: separate;
+    border-radius: 2px;
+    border-spacing: 0px;
+    bottom: 0px;
+    box-shadow: $shadow;
+    margin: 0px;
+    position: absolute;
+    transform: translateY(calc(100% - 3px));
+    width: 254px;
+    z-index: 100;
+    
+    tr{
+        
+        // Override hover styles for default table
+        
+        &:hover > td{
+            
+            background-color: inherit;
+            
+        }
+        
+        // Standard styles for date picker table data
+        
+        td{
+            
+            box-sizing: border-box;
+            font-size: 16px;
+            padding: 0px;
+            text-align: center;
+            vertical-align: middle;
+            
+            // Standard styles for date picker buttons
+            
+            button{
+                
+                background-color: inherit;
+                border: none;
+                color: inherit;
+                cursor: pointer;
+                font-size: inherit;
+                margin: 0px;
+                padding: 0px !important;
+                
+            }
+            
+        }
+        
+        // Styles for date picker header
+        
+        &.date-picker-header{
+            
+            position: relative;
+            
+            td{
+                
+                // Set borders for date picker header
+                
+                background-color: $primary-dk4;
+                border-color: $primary-dk4 $primary-dk4 $gray-dk4 $primary-dk4;
+                border-radius: 2px 2px 0px 0px;
+                border-style: solid;
+                border-width: 1px 1px 3px 1px;
+                color: white;
+                
+                // Styles for container for month and year selections in header
+                
+                span{
+                    
+                    color: inherit;
+                    display: inline-block;
+                    font-size: inherit;
+                    padding-top: 5px;
+                    width: 100%;
+                    
+                    // Show triangle at top pointing to field
+                    
+                    &:before{
+                        
+                        background-color: $primary-dk4;
+                        box-shadow: $shadow-45;
+                        content: "";
+                        height: 12px;
+                        left: 14px;
+                        position: absolute;
+                        top: -6px;
+                        transform: rotate(-45deg);
+                        width: 12px;
+                        z-index: -1;
+                        
+                    }
+                    
+                    // Styles for hidden elements used to dynamically set width of month and year selections in header
+                    
+                    .month-width,
+                    .year-width{
+                        
+                        display: none;
+                        
+                    }
+                    
+                    // Styles for month and year selections
+                    
+                    select{
+                        
+                        background-color: inherit;
+                        background-image: none;
+                        border: none;
+                        border-radius: 0px;
+                        color: inherit;
+                        font-size: inherit;
+                        font-weight: bold;
+                        height: auto;
+                        line-height: 25px;
+                        padding: 0px 3px;
+                        width: auto;
+                        
+                        &:hover{
+                            
+                            background-color: $primary-dk3;
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+                // Styles for previous year, previous month, today, next month, and next year buttons in header
+                
+                button{
+                    
+                    border-radius: 0px;
+                    line-height: 22px;
+                    width: 17.5%;
+                    
+                    &:hover{
+                        
+                        background-color: $primary-dk3;
+                        
+                    }
+                    
+                }
+                
+                .prev-year:before{
+                    
+                    content: "\276E\276E";
+                    
+                }
+                
+                .prev-month:before{
+                    
+                    content: "\276E";
+                    
+                }
+                
+                .today:before{
+                    
+                    content: "\25CF";
+                    
+                }
+                
+                .next-month:before{
+                    
+                    content: "\276F";
+                    
+                }
+                
+                .next-year:before{
+                    
+                    content: "\276F\276F";
+                    
+                }
+                
+            }
+            
+        }
+        
+        // Common styles for day row (i.e. S M T W T F S) and rows for selecting dates
+        
+        &.days-of-week,
+        &.dates{
+            
+            td{
+                
+                height: 30px;
+                width: 36px;
+                
+                // Set border for left side
+                
+                &:first-of-type{
+                    
+                    border-bottom-left-radius: 0px;
+                    border-left: 1px solid $gray;
+                    border-top-left-radius: 0px;
+                    
+                }
+                
+                // Set border for right side
+                
+                &:last-of-type{
+                    
+                    border-bottom-right-radius: 0px;
+                    border-right: 1px solid $gray;
+                    border-top-right-radius: 0px;
+                    
+                }
+                
+            }
+            
+        }
+        
+        // Styles for day row (i.e. S M T W T F S)
+        
+        &.days-of-week{
+            
+            border-bottom: 1px solid $gray;
+            
+            td{
+                
+                background-color: $gray-lt4;
+                border-bottom: 1px solid $gray;
+                font-weight: bold;
+                
+            }
+            
+        }
+        
+        // Styles for rows for selecting dates
+        
+        &.dates{
+            
+            td{
+                
+                background-color: white;
+                border-color: transparent;
+                
+                // Styles for buttons for selecting dates
+                
+                button{
+                    
+                    border-radius: 2px;
+                    font-weight: inherit;
+                    line-height: 30px;
+                    width: 100%;
+                    
+                    &:hover{
+                        
+                        background-color: $gray-lt5;
+                        color: $gray-dk5;
+                        
+                    }
+                    
+                    // Current selected date
+                    
+                    &.selected{
+                        
+                        background-color: $primary-dk4;
+                        color: white;
+                        font-weight: bold;
+                        
+                    }
+                    
+                    // Dates not in selected month
+                    
+                    &.prev-month,
+                    &.next-month{
+                        
+                        color: $gray;
+                        
+                        &.selected{
+                            
+                            background-color: $gray;
+                            color: white;
+                            
+                        }
+                        
+                    }
+                    
+                    // Today's date
+                    
+                    &.today{
+                        
+                        position: relative;
+                        
+                        &:before{
+                            
+                            border: 1px solid $gray-dk5;
+                            border-radius: 50%;
+                            box-sizing: border-box;
+                            content: "";
+                            display: block;
+                            height: 28px;
+                            left: 4px;
+                            position: absolute;
+                            top: 1px;
+                            width: 28px;
+                            
+                        }
+                        
+                        &.prev-month:before,
+                        &.next-month:before{
+                            
+                            border-color: $gray;
+                            
+                        }
+                        
+                        &.selected:before{
+                            
+                            border-color: white;
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+            
+            // Set border for bottom row
+            
+            &:last-of-type{
+                
+                td{
+                    
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    border-bottom: 1px solid $gray;
+                    
+                    // Set border radius for bottom left
+                    
+                    &:first-of-type{
+                        
+                        border-bottom-left-radius: 2px;
+                        
+                    }
+                    
+                    // Set border radius for bottom right
+                    
+                    &:last-of-type{
+                        
+                        border-bottom-right-radius: 2px;
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+
+
+/**************************************** TIME PICKERS ****************************************/
+
+// Styles for selecting times for time fields
+
+.time-picker{
+    
+    bottom: 0px;
+    font-size: 16px;
+    position: absolute;
+    text-align: center;
+    transform: translateY(calc(100% - 3px));
+    width: 254px;
+    z-index: 100;
+    
+    // Show triangle at top pointing to field
+    
+    &:before,
+    &:after{
+        
+        content: "";
+        position: absolute;
+        transform: rotate(-45deg);
+        
+    }
+    
+    // Gray triangle
+    
+    &:before{
+        
+        border-color: $gray-lt5 $gray-lt5 transparent transparent;
+        border-style: solid;
+        border-width: 6px;
+        left: 15px;
+        top: -5px;
+        z-index: 100;
+        
+    }
+    
+    // Shadow for triangle
+    
+    &:after{
+        
+        background-color: $gray-lt5;
+        border: 1px solid $gray;
+        box-shadow: $shadow-45;
+        height: 12px;
+        left: 14px;
+        top: -6px;
+        width: 12px;
+        z-index: 80;
+        
+    }
+    
+    // Container for selections
+    
+    span{
+        
+        background-color: $gray-lt5;
+        border: 1px solid $gray;
+        border-radius: 2px;
+        box-shadow: $shadow;
+        box-sizing: border-box;
+        display: block;
+        padding: 10px;
+        position: relative;
+        width: 100%;
+        z-index: 90;
+        
+    }
+    
+    // Selections for hour, minute, and AM/PM
+    
+    .hour,
+    .minute,
+    .ampm{
+        
+        background-position:
+            calc(100% - 11px) calc(1em - 4px),
+            calc(100% - 5px) calc(1em - 4px);
+        font-size: 16px;
+        height: auto;
+        margin: 0px 2px;
+        padding: 5px 25px 5px 5px;
+        width: auto;
+        
+    }
+    
+}
+
+
+
+/**************************************** AUTOCOMPLETE ****************************************/
+
+// Styles for autocomplete field container
+
+.autocomplete-field{
+    
+    padding: 5px 10px;
+    position: relative;
+    
+    // Styles for autocomplete list
+    
+    .autocomplete-list{
+        
+        background-color: white;
+        border: 1px solid $gray-lt2;
+        box-shadow: $shadow;
+        box-sizing: border-box;
+        position: absolute;
+        top: 45px;
+        width: calc(100% - 20px);
+        z-index: 10;
+        
+        // Styles for autocomplete options
+        
+        button{
+            
+            background-color: white !important;
+            border: none !important;
+            border-radius: 0px !important;
+            color: $gray-dk4 !important;
+            cursor: pointer !important;
+            font-size: 14px !important;
+            font-weight: normal !important;
+            padding: 8px 10px !important;
+            text-align: left !important;
+            width: 100% !important;
+            
+            // Highlight options on hover or pressing up/down
+            
+            &.selected,
+            &:hover{
+                
+                background-color: $gray-lt4 !important;
+                
+            }
+            
+            // Styles for autocomplete option subtext
+            
+            .autocomplete-subtext{
+                
+                color: $gray !important;
+                float: right !important;
+                font-size: 10px !important;
+                margin-top: 3px !important;
+                
+            }
+            
+        }
+        
+    }
+    
+    label + input + .autocomplete-list{
+        
+        top: 68px;
+        
+    }
+    
+}
+
+
+
+/**************************************** TOKENS ****************************************/
+
+// Styles for token field container
+
+.token-field{
+    
+    // Styles for token container
+    
+    .token-container{
+        
+        display: block;
+        margin: 5px 0px;
+        width: 100%;
+        
+        // Styles for token
+        
+        .token{
+            
+            background-color: $gray-lt5;
+            border: 1px solid $gray-lt2;
+            border-radius: 5px;
+            display: inline-block;
+            float: left;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 5px 5px 0px 0px;
+            padding: 5px 10px;
+            
+            // Styles for exit button for token
+            
+            button.exit{
+                
+                font-size: inherit;
+                font-weight: bold;
+                margin-left: 10px;
+                padding: 0px;
+                width: auto;
+                
+            }
+            
+        }
+        
+    }
+    
+}

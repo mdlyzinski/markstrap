@@ -1,0 +1,408 @@
+<html>
+    
+    <head>
+        
+        <title>Table Test</title>
+        
+        <meta name="viewport" content="width=device-width"/>
+        
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="../scripts/main.js"></script>
+        
+    </head>
+    
+    <body>
+        
+        <h1>Tables</h1>
+        <div style="background-color: white; padding: 50px;">
+            <div class="table-show">
+                <label>Show:</label>
+                <select>
+                    <option value="5" selected>5</option>
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+            <div class="table-filter">
+                <label>Filter:</label>
+                <input type="text" placeholder="Filter results...">
+            </div>
+            <div class="table-container">
+                <table class="paginated" style="min-width: 600px;">
+                    <tr>
+                        <th class="sortable">Header 1</th>
+                        <th class="sortable">Header 2</th>
+                        <th class="sortable number">Header 3</th>
+                        <th class="sortable date-time">Header 4</th>
+                    </tr>
+                    <tr>
+                        <td>Row 1</td>
+                        <td>VA</td>
+                        <td>3</td>
+                        <td>12/25/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2</td>
+                        <td>MD</td>
+                        <td>6</td>
+                        <td>11/23/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 3</td>
+                        <td>PA</td>
+                        <td>9</td>
+                        <td>1/2/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 4</td>
+                        <td>DE</td>
+                        <td>2</td>
+                        <td>7/4/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 5</td>
+                        <td>WV</td>
+                        <td>5</td>
+                        <td>10/9/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 6</td>
+                        <td>NC</td>
+                        <td>8</td>
+                        <td>5/29/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 7</td>
+                        <td>SC</td>
+                        <td>1</td>
+                        <td>1/16/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 8</td>
+                        <td>TN</td>
+                        <td>4</td>
+                        <td>11/10/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 9</td>
+                        <td>KY</td>
+                        <td>7</td>
+                        <td>2/20/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 10</td>
+                        <td>NY</td>
+                        <td>0</td>
+                        <td>9/4/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 11</td>
+                        <td>NJ</td>
+                        <td>13</td>
+                        <td>10/8/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 12</td>
+                        <td>GA</td>
+                        <td>16</td>
+                        <td>1/15/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 13</td>
+                        <td>FL</td>
+                        <td>19</td>
+                        <td>11/12/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 14</td>
+                        <td>MA</td>
+                        <td>12</td>
+                        <td>1/1/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 15</td>
+                        <td>CT</td>
+                        <td>15</td>
+                        <td>11/22/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 16</td>
+                        <td>RI</td>
+                        <td>18</td>
+                        <td>5/28/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 17</td>
+                        <td>NH</td>
+                        <td>11</td>
+                        <td>2/19/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 18</td>
+                        <td>ME</td>
+                        <td>14</td>
+                        <td>9/3/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 19</td>
+                        <td>VT</td>
+                        <td>17</td>
+                        <td>12/25/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 20</td>
+                        <td>DC</td>
+                        <td>10</td>
+                        <td>7/4/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 1</td>
+                        <td>VA</td>
+                        <td>3</td>
+                        <td>12/25/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2</td>
+                        <td>MD</td>
+                        <td>6</td>
+                        <td>11/23/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 3</td>
+                        <td>PA</td>
+                        <td>9</td>
+                        <td>1/2/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 4</td>
+                        <td>DE</td>
+                        <td>2</td>
+                        <td>7/4/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 5</td>
+                        <td>WV</td>
+                        <td>5</td>
+                        <td>10/9/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 6</td>
+                        <td>NC</td>
+                        <td>8</td>
+                        <td>5/29/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 7</td>
+                        <td>SC</td>
+                        <td>1</td>
+                        <td>1/16/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 8</td>
+                        <td>TN</td>
+                        <td>4</td>
+                        <td>11/10/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 9</td>
+                        <td>KY</td>
+                        <td>7</td>
+                        <td>2/20/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 10</td>
+                        <td>NY</td>
+                        <td>0</td>
+                        <td>9/4/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 11</td>
+                        <td>NJ</td>
+                        <td>13</td>
+                        <td>10/8/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 12</td>
+                        <td>GA</td>
+                        <td>16</td>
+                        <td>1/15/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 13</td>
+                        <td>FL</td>
+                        <td>19</td>
+                        <td>11/12/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 14</td>
+                        <td>MA</td>
+                        <td>12</td>
+                        <td>1/1/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 15</td>
+                        <td>CT</td>
+                        <td>15</td>
+                        <td>11/22/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 16</td>
+                        <td>RI</td>
+                        <td>18</td>
+                        <td>5/28/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 17</td>
+                        <td>NH</td>
+                        <td>11</td>
+                        <td>2/19/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 18</td>
+                        <td>ME</td>
+                        <td>14</td>
+                        <td>9/3/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 19</td>
+                        <td>VT</td>
+                        <td>17</td>
+                        <td>12/25/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 20</td>
+                        <td>DC</td>
+                        <td>10</td>
+                        <td>7/4/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 1</td>
+                        <td>VA</td>
+                        <td>3</td>
+                        <td>12/25/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2</td>
+                        <td>MD</td>
+                        <td>6</td>
+                        <td>11/23/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 3</td>
+                        <td>PA</td>
+                        <td>9</td>
+                        <td>1/2/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 4</td>
+                        <td>DE</td>
+                        <td>2</td>
+                        <td>7/4/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 5</td>
+                        <td>WV</td>
+                        <td>5</td>
+                        <td>10/9/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 6</td>
+                        <td>NC</td>
+                        <td>8</td>
+                        <td>5/29/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 7</td>
+                        <td>SC</td>
+                        <td>1</td>
+                        <td>1/16/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 8</td>
+                        <td>TN</td>
+                        <td>4</td>
+                        <td>11/10/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 9</td>
+                        <td>KY</td>
+                        <td>7</td>
+                        <td>2/20/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 10</td>
+                        <td>NY</td>
+                        <td>0</td>
+                        <td>9/4/2017</td>
+                    </tr>
+                    <tr>
+                        <td>Row 11</td>
+                        <td>NJ</td>
+                        <td>13</td>
+                        <td>10/8/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 12</td>
+                        <td>GA</td>
+                        <td>16</td>
+                        <td>1/15/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 13</td>
+                        <td>FL</td>
+                        <td>19</td>
+                        <td>11/12/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 14</td>
+                        <td>MA</td>
+                        <td>12</td>
+                        <td>1/1/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 15</td>
+                        <td>CT</td>
+                        <td>15</td>
+                        <td>11/22/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 16</td>
+                        <td>RI</td>
+                        <td>18</td>
+                        <td>5/28/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 17</td>
+                        <td>NH</td>
+                        <td>11</td>
+                        <td>2/19/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 18</td>
+                        <td>ME</td>
+                        <td>14</td>
+                        <td>9/3/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 19</td>
+                        <td>VT</td>
+                        <td>17</td>
+                        <td>12/25/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Row 20</td>
+                        <td>DC</td>
+                        <td>10</td>
+                        <td>7/4/2018</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+    </body>
+    
+</html>

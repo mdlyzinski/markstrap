@@ -1,0 +1,1228 @@
+/**************************************** BREADCRUMBS ****************************************/
+
+// Containers for breadcrumbs
+
+.breadcrumb-pages,
+.breadcrumb-steps{
+    
+    display: inline-block;
+    font-size: 0px;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+    
+    // Breadcrumb links
+    
+    a{
+        
+        background-color: $gray-lt5;
+        border-color: $gray-lt5;
+        color: $gray-dk4;
+        display: inline-block;
+        font-size: 14px;
+        margin-right: 23px;
+        position: relative;
+        
+        // Styles for chevron shape
+        
+        &:before,
+        &:after{
+            
+            border-style: solid;
+            content: "";
+            height: 0px;
+            position: absolute;
+            top: 0px;
+            width: 0px;
+            
+        }
+        
+        &:before{
+            
+            border-color: $gray-lt5 $gray-lt5 $gray-lt5 transparent;
+            left: -20px;
+            
+        }
+        
+        &:after{
+            
+            border-color: transparent transparent transparent $gray-lt5;
+            left: 100%;
+            
+        }
+        
+        // Straight left edge for first link
+        
+        &:first-of-type{
+            
+            border-radius: 2px 0px 0px 2px;
+            margin-left: 15px;
+            
+            &:before{
+                
+                border: none;
+                
+            }
+            
+        }
+        
+        // Highlight link on hover
+        
+        &:hover{
+            
+            background-color: $gray-lt4;
+            text-decoration: none;
+            
+            &:before{
+                
+                border-color: $gray-lt4 $gray-lt4 $gray-lt4 transparent;
+                
+            }
+            
+            &:after{
+                
+                border-color: transparent transparent transparent $gray-lt4;
+                
+            }
+            
+        }
+        
+        // Styles for active link
+        
+        &.active,
+        &.active:hover{
+            
+            background-color: $primary-dk4;
+            border-color: $primary-dk4;
+            color: white;
+            
+            &:before{
+                
+                border-color: $primary-dk4 $primary-dk4 $primary-dk4 transparent;
+                
+            }
+            
+            &:after{
+                
+                border-color: transparent transparent transparent $primary-dk4;
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+// Styles for breadcrumbs for pages
+
+.breadcrumb-pages{
+    
+    a{
+        
+        height: 40px;
+        line-height: 40px;
+        padding: 0px 30px 0px 25px;
+        
+        &:before,
+        &:after{
+            
+            border-width: 20px 10px;
+            
+        }
+        
+        &:first-of-type{
+            
+            padding-left: 35px;
+            
+        }
+        
+        &.active{
+            
+            font-weight: bold;
+            
+        }
+        
+        // Override line height for Font Awesome icons
+        
+        .fa{
+            
+            line-height: 40px !important;
+            
+        }
+        
+    }
+    
+}
+
+// Styles for breadcrumbs for steps
+
+.breadcrumb-steps{
+    
+    a{
+        
+        height: 60px;
+        line-height: 60px;
+        padding: 0px 20px 0px 10px;
+        
+        &:before,
+        &:after{
+            
+            border-width: 30px 10px;
+            
+        }
+        
+        &:first-of-type{
+            
+            padding-left: 25px;
+            
+        }
+        
+        // Container for breadcrumb content
+        
+        &> div{
+            
+            display: inline-block;
+            
+            // Styles for step number
+            
+            &:first-of-type{
+                
+                float: left;
+                font-size: 36px;
+                padding-right: 5px;
+                
+                // Override line height for Font Awesome icons
+                
+                .fa{
+                    
+                    line-height: 60px !important;
+                    
+                }
+                
+            }
+            
+            // Styles for step details
+            
+            div{
+                
+                height: auto;
+                line-height: 100%;
+                
+                // Step name
+                
+                &:first-of-type{
+                
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding: 13px 0px 4px 0px;
+                    text-align: left;
+                
+                }
+                
+                // Step description
+                
+                &:last-of-type{
+                    
+                    font-size: 12px;
+                    padding: 2px 0px 0px 0px;
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+
+
+/**************************************** PAGINATION ****************************************/
+
+// Container for pagination
+
+.pagination{
+    
+    font-size: 0px;
+    text-align: center;
+    width: 100%;
+    
+    // Pagination links/buttons
+    
+    a{
+        
+        line-height: 30px;
+        
+    }
+    
+    a,
+    button{
+        
+        align-items: flex-start;
+        background-color: transparent;
+        border: none;
+        border-radius: 2px;
+        color: $gray-dk4;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: normal;
+        height: 30px;
+        margin: 0px;
+        padding: 5px 10px;
+        text-decoration: none;
+        
+        // Highlight on hover if not active
+        
+        &:not(.active):hover{
+            
+            background-color: $gray-lt5;
+            
+        }
+        
+        // Selected page
+        
+        &.active{
+            
+            background-color: $primary-dk4;
+            color: white;
+            font-weight: bold;
+            
+        }
+        
+        // Button to go to first page
+        
+        &.first:after{
+            
+            content: "\276E\276E";
+            
+        }
+        
+        // Button to go to previous page
+        
+        &.prev:after{
+            
+            content: "\276E";
+            
+        }
+        
+        // Button to go to next page
+        
+        &.next:after{
+            
+            content: "\276F";
+            
+        }
+        
+        // Button to go to last page
+        
+        &.last:after{
+            
+            content: "\276F\276F";
+            
+        }
+        
+        &.ellipsis:after{
+            
+            content: "...";
+            
+        }
+        
+    }
+    
+}
+
+
+
+/**************************************** HELP TEXT ****************************************/
+
+// Container for target text and help text
+
+.help{
+    
+    position: relative;
+    
+    b{
+        
+        color: $primary-dk4;
+        
+    }
+    
+    // On hover, show hoverable help text
+    
+    &.hover:hover{
+        
+        .help-text-s,
+        .help-text-m,
+        .help-text-l{
+            
+            display: block;
+            
+        }
+        
+    }
+    
+    // Styles for clickable help text
+    
+    &.click{
+        
+        cursor: pointer;
+        
+    }
+    
+    .help-text-s,
+    .help-text-m,
+    .help-text-l{
+        
+        border-radius: 2px;
+        box-shadow: $shadow;
+        cursor: default;
+        display: none;
+        position: absolute;
+        
+        // Show triangle pointing to target
+        
+        &:before,
+        &:after{
+            
+            content: "";
+            position: absolute;
+            transform: rotate(-45deg);
+            
+        }
+        
+        // White triangle
+        
+        &:before{
+            
+            border-style: solid;
+            border-width: 7px;
+            z-index: 100;
+            
+        }
+        
+        // Shadow for triangle
+        
+        &:after{
+            
+            background-color: white;
+            border: 3px solid $primary-dk4;
+            box-shadow: $shadow-45;
+            height: 14px;
+            width: 14px;
+            z-index: 80;
+            
+        }
+        
+        &.active{
+            
+            display: block;
+            
+        }
+        
+        .help-text{
+            
+            background-color: white;
+            border: 3px solid $primary-dk4;
+            border-radius: inherit;
+            box-sizing: border-box;
+            display: block;
+            font-size: 14px;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+            z-index: 90;
+            
+        }
+        
+    }
+    
+    // Size of help text
+    
+    .help-text-s{
+        
+        width: 150px;
+        
+    }
+    
+    .help-text-m{
+        
+        width: 300px;
+        
+    }
+    
+    .help-text-l{
+        
+        width: 450px;
+        
+    }
+    
+    // Direction of help text
+    
+    .ht-above{
+        
+        left: 50%;
+        top: -10px;
+        transform: translate(-50%, -100%);
+        
+        // Show triangle pointing to target
+        
+        &:before,
+        &:after{
+            
+            transform: rotate(-45deg) translate(-50%, 0px);
+            
+        }
+        
+        // White triangle
+        
+        &:before{
+            
+            border-color: transparent transparent white white;
+            bottom: 4px;
+            left: calc(50% - 2px);
+            
+        }
+        
+        // Shadow for triangle
+        
+        &:after{
+            
+            bottom: 3px;
+            left: calc(50% - 3px);
+            
+        }
+        
+    }
+    
+    .ht-below{
+        
+        bottom: -10px;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        
+        // Show triangle pointing to target
+        
+        &:before,
+        &:after{
+            
+            transform: rotate(-45deg) translate(-50%, 0px);
+            
+        }
+        
+        // White triangle
+        
+        &:before{
+            
+            border-color: white white transparent transparent;
+            left: calc(50% - 2px);
+            top: -6px;
+            
+        }
+        
+        // Shadow for triangle
+        
+        &:after{
+            
+            left: calc(50% - 3px);
+            top: -11px;
+            
+        }
+        
+    }
+    
+    .ht-left{
+        
+        left: -10px;
+        top: 50%;
+        transform: translate(-100%, -50%);
+        
+        // Show triangle pointing to target
+        
+        &:before,
+        &:after{
+            
+            transform: rotate(-45deg) translate(0px, -50%);
+            
+        }
+        
+        // White triangle
+        
+        &:before{
+            
+            border-color: transparent white white transparent;
+            right: -6px;
+            top: calc(50% - 2px);
+            
+        }
+        
+        // Shadow for triangle
+        
+        &:after{
+            
+            right: -11px;
+            top: calc(50% - 3px);
+            
+        }
+        
+    }
+    
+    .ht-right{
+        
+        right: -10px;
+        top: 50%;
+        transform: translate(100%, -50%);
+        
+        // Show triangle pointing to target
+        
+        &:before,
+        &:after{
+            
+            transform: rotate(-45deg) translate(0px, -50%);
+            
+        }
+        
+        // White triangle
+        
+        &:before{
+            
+            border-color: white transparent transparent white;
+            left: 4px;
+            top: calc(50% - 2px);
+            
+        }
+        
+        // Shadow for triangle
+        
+        &:after{
+            
+            left: 3px;
+            top: calc(50% - 3px);
+            
+        }
+        
+    }
+    
+}
+
+
+
+/**************************************** BANNERS ****************************************/
+
+// General styles for banners
+
+.success-banner,
+.warning-banner,
+.error-banner,
+.message-banner{
+    
+    border: 2px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: none;
+    font-size: 14px;
+    margin: 10px;
+    padding: 15px 20px;
+    position: relative;
+    width: calc(100% - 20px);
+    
+    span{
+        
+        font-size: inherit;
+        
+    }
+    
+    .exit{
+        
+        color: inherit;
+        font-size: 24px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        
+    }
+    
+}
+
+// Styles for banners with icons
+
+.success-banner,
+.warning-banner,
+.error-banner{
+    
+    padding-left: 60px;
+    
+    &:before{
+        
+        font-family: FontAwesome;
+        font-size: 32px;
+        left: 18px;
+        top: 7px;
+        position: absolute;
+        
+    }
+    
+}
+
+// Styles for success banner
+
+.success-banner{
+    
+    background-color: $green-lt2;
+    color: $green-dk2;
+    
+    &:before{
+        
+        content: "\F058";
+        color: inherit;
+        
+    }
+    
+}
+
+// Styles for warning banner
+
+.warning-banner{
+    
+    background-color: $yellow-lt2;
+    color: $yellow-dk1;
+    
+    &:before{
+        
+        content: "\F071";
+        color: inherit;
+        font-size: 28px;
+        top: 9px;
+        
+    }
+    
+}
+
+// Styles for error banner
+
+.error-banner{
+    
+    background-color: $red-lt2;
+    color: $red-dk1;
+    
+    &:before{
+        
+        content: "\F057";
+        color: inherit;
+        
+    }
+    
+}
+
+// Styles for general message banner
+
+.message-banner{
+    
+    background-color: white;
+    
+}
+
+
+
+/**************************************** BADGES ****************************************/
+
+// General styles for badges
+
+.badge,
+.badge-red,
+.badge-gray,
+.badge-white{
+    
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 7px;
+    
+    // Hide if empty
+    
+    &:empty{
+        
+        display: none;
+        
+    }
+    
+}
+
+// White text for colored badges
+
+.badge,
+.badge-red,
+.badge-gray{
+    
+    color: white;
+    
+}
+
+// Standard badge
+
+.badge{
+    
+    background-color: $primary-dk4;
+    
+}
+
+// Red badge
+
+.badge-red{
+    
+    background-color: $red-dk1;
+    
+}
+
+// Gray badge
+
+.badge-gray{
+    
+    background-color: $gray;
+    
+}
+
+// White badge
+
+.badge-white{
+    
+    background-color: white;
+    color: $primary-dk4;
+    
+}
+
+// Float badges inside navbars or tabs to right
+
+.nav,
+.sub-nav,
+.mobile-menu,
+.htab,
+.vtab{
+    
+    .badge,
+    .badge-red,
+    .badge-gray,
+    .badge-white{
+        
+        float: right;
+        margin-left: 7px;
+        
+    }
+    
+}
+
+// White background and colored text for badges inside colored navbar and mobile menu
+
+.nav,
+.mobile-menu .active{
+    
+    .badge{
+        
+        background-color: white;
+        color: $primary-dk4;
+        
+    }
+    
+}
+
+.nav{
+    
+    .submenu .badge{
+        
+        background-color: $primary-dk4;
+        color: white;
+        
+    }
+    
+}
+
+// Align badges inside navbars or tabs
+
+.nav,
+.sub-nav,
+.vtab{
+    
+    .badge,
+    .badge-red,
+    .badge-gray,
+    .badge-white{
+        
+        margin-top: -1px;
+        
+    }
+    
+}
+
+// Gray out badges for inactive tabs
+
+.htab,
+.vtab{
+    
+    &:not(.active){
+        
+        .badge{
+            
+            background-color: $gray;
+            color: white;
+            
+        }
+        
+        &:hover{
+            
+            .badge{
+                
+                background-color: $gray-dk4;
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+
+
+/**************************************** LOADING ICONS ****************************************/
+
+// General styles for loading icons
+
+.loading-icon-s,
+.loading-icon-m,
+.loading-icon-l{
+    
+    left: 50%;
+    position: relative;
+    top: 50%;
+    text-align: center;
+    @include translate(-50%, -50%);
+    width: 100px;
+    
+    div{
+        
+        // Rotating pieces of icon
+        
+        &:not(:last-of-type){
+            
+            animation-duration: 1.2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            border-radius: 50%;
+            border-style: solid;
+            box-sizing: border-box;
+            position: absolute;
+            
+        }
+        
+        &:nth-of-type(1){
+            
+            animation-name: loading1;
+            
+        }
+        
+        &:nth-of-type(2){
+            
+            animation-name: loading2;
+            
+        }
+        
+        &:nth-of-type(3){
+            
+            animation-name: loading3;
+            
+        }
+        
+    }
+    
+}
+
+// Small loading icon
+
+.loading-icon-s{
+    
+    div{
+        
+        // Rotating pieces of icon
+        
+        &:not(:last-of-type){
+            
+            border-width: 3px;
+            height: 30px;
+            left: calc(50% - 15px);
+            width: 30px;
+            
+        }
+        
+        // Text for icon
+        
+        &:last-of-type{
+            
+            font-size: 10px;
+            padding-top: 40px;
+            
+        }
+        
+    }
+    
+}
+
+// Medium loading icon
+
+.loading-icon-m{
+    
+    div{
+        
+        // Rotating pieces of icon
+        
+        &:not(:last-of-type){
+            
+            border-width: 5px;
+            height: 60px;
+            left: calc(50% - 30px);
+            width: 60px;
+            
+        }
+        
+        // Text for icon
+        
+        &:last-of-type{
+            
+            font-size: 14px;
+            padding-top: 70px;
+            
+        }
+        
+    }
+    
+}
+
+// Large loading icon
+
+.loading-icon-l{
+    
+    div{
+        
+        // Rotating pieces of icon
+        
+        &:not(:last-of-type){
+            
+            border-width: 7px;
+            height: 90px;
+            left: calc(50% - 45px);
+            width: 90px;
+            
+        }
+        
+        // Text for icon
+        
+        &:last-of-type{
+            
+            font-size: 18px;
+            padding-top: 100px;
+            
+        }
+        
+    }
+    
+}
+
+// For loading icon inline on page, color black
+
+.loading-container{
+    
+    .loading-icon-s,
+    .loading-icon-m,
+    .loading-icon-l{
+        
+        div{
+            
+            // Rotating pieces of icon
+            
+            &:not(:last-of-type){
+                
+                border-color: black transparent transparent transparent;
+                
+            }
+            
+            // Text for icon
+            
+            &:last-of-type{
+                
+                color: black;
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+// For loading icon overlaid on page, color white
+
+.loading-screen{
+    
+    background-color: $overlay;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000px;
+    
+    .loading-icon-s,
+    .loading-icon-m,
+    .loading-icon-l{
+        
+        div{
+            
+            // Rotating pieces of icon
+            
+            &:not(:last-of-type){
+                
+                border-color: white transparent transparent transparent;
+                
+            }
+            
+            // Text for icon
+            
+            &:last-of-type{
+                
+                color: white;
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+// Animation for loading icons
+
+@keyframes loading1{
+    
+    0%{@include rotate(0);}
+    25%{@include rotate(45);}
+    50%{@include rotate(90);}
+    75%{@include rotate(135);}
+    100%{@include rotate(360);}
+    
+}
+
+@keyframes loading2{
+    
+    0%{@include rotate(0);}
+    25%{@include rotate(45);}
+    50%{@include rotate(179);}
+    75%{@include rotate(224);}
+    100%{@include rotate(360);}
+    
+}
+
+@keyframes loading3{
+    
+    0%{@include rotate(0);}
+    25%{@include rotate(45);}
+    50%{@include rotate(268);}
+    75%{@include rotate(313);}
+    100%{@include rotate(360);}
+    
+}
+
+
+
+/**************************************** MOBILE ****************************************/
+
+// Tablet portrait and smaller
+
+@media only screen and (max-width: 768px){
+    
+    .breadcrumb-pages,
+    .breadcrumb-steps{
+        
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+        
+        &::-webkit-scrollbar{
+            
+            display: none;
+            
+        }
+        
+        &::-webkit-scrollbar-thumb{
+            
+            display: none;
+            
+        }
+        
+    }
+    
+}
+
+
+
+/**************************************** MOBILE GRID ****************************************/
+
+// When 2-col grid col flex size is tablet portrait and smaller, apply tablet portrait effects to content
+
+@media only screen and (max-width: 1098px) and (min-width: 768px){
+    
+    .grid-container-1-3 .grid-col-flex,
+    .grid-container-3-1 .grid-col-flex{
+        
+        .breadcrumb-pages,
+        .breadcrumb-steps{
+            
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: 100%;
+            
+            &::-webkit-scrollbar{
+                
+                display: none;
+                
+            }
+            
+            &::-webkit-scrollbar-thumb{
+                
+                display: none;
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+// When 3-col grid col flex size is tablet portrait and smaller, apply tablet portrait effects to content
+
+@media only screen and (max-width: 1368px) and (min-width: 1038px){
+    
+    .grid-container-1-3-1 .grid-col-flex{
+        
+        .breadcrumb-pages,
+        .breadcrumb-steps{
+            
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: 100%;
+            
+            &::-webkit-scrollbar{
+                
+                display: none;
+                
+            }
+            
+            &::-webkit-scrollbar-thumb{
+                
+                display: none;
+                
+            }
+            
+        }
+        
+    }
+    
+}

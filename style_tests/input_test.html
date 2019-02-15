@@ -1,0 +1,388 @@
+<html>
+    
+    <head>
+        
+        <title>Inputs Test</title>
+        
+        <meta name="viewport" content="width=device-width"/>
+        
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="../scripts/main.js"></script>
+        
+    </head>
+    
+    <body>
+        
+        <div>
+            <form onsubmit="return false">
+                <h6 class="underline-color">Form Columns</h6>
+                <fieldset>
+                    <div class="field-row">
+                        <div class="field-33 required">
+                            <label>Field 1</label>
+                            <input type="text">
+                        </div>
+                        <div class="field-33 required">
+                            <label>Field 2</label>
+                            <input type="text">
+                        </div>
+                        <div class="field-33 required">
+                            <label>Field 3</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-50">
+                            <label>Field 4</label>
+                            <input type="text">
+                        </div>
+                        <div class="field-50">
+                            <label>Field 5</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-100">
+                            <label>Field 6</label>
+                            <textarea maxlength="1000"></textarea>
+                        </div>
+                    </div>
+                    <div class="button-row">
+                        <button>Submit</button>
+                        <button>Cancel</button>
+                    </div>
+                </fieldset>
+                
+                <h6 class="underline-color">Input Types</h6>
+                <fieldset>
+                    <div class="field-row">
+                        <div class="field-50">
+                            <label>Text Field</label>
+                            <input type="text">
+                        </div>
+                        <div class="field-50">
+                            <label>Number Field</label>
+                            <input type="text" class="number">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-50">
+                            <label>Currency Field</label>
+                            <input type="text" class="currency dec2">
+                        </div>
+                        <div class="field-50">
+                            <label>Percentage Field</label>
+                            <input type="text" class="percent dec1">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-50">
+                            <label>Phone Field</label>
+                            <input type="text" class="phone">
+                        </div>
+                        <div class="field-50">
+                            <label>URL Field</label>
+                            <input type="text" class="url">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-50">
+                            <label>Email Field</label>
+                            <input type="text" class="email">
+                        </div>
+                        <div class="field-50">
+                            <label>Password Field</label>
+                            <input type="password" class="password">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-50">
+                            <label>Date Field</label>
+                            <input type="text" class="date">
+                        </div>
+                        <div class="field-50">
+                            <label>Time Field</label>
+                            <input type="text" class="time time-with-timezone">
+                            <select class="timezone">
+                                <option>EST</option>
+                                <option>CST</option>
+                                <option>MST</option>
+                                <option>PST</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-50">
+                            <label>Picklist Field</label>
+                            <select>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                                <option>Option 4</option>
+                                <option>Option 5</option>
+                            </select>
+                        </div>
+                        <div class="field-50">
+                            <label>Multiple Picklist Fields</label>
+                            <select class="input-50">
+                                <option>Month</option>
+                                <option>January</option>
+                                <option>February</option>
+                                <option>March</option>
+                                <option>April</option>
+                                <option>May</option>
+                                <option>June</option>
+                                <option>July</option>
+                                <option>August</option>
+                                <option>September</option>
+                                <option>October</option>
+                                <option>November</option>
+                                <option>December</option>
+                            </select>
+                            <select class="input-25">
+                                <option>01</option>
+                                <option>02</option>
+                                <option>03</option>
+                                <option>04</option>
+                                <option>05</option>
+                                <option>06</option>
+                                <option>07</option>
+                                <option>08</option>
+                                <option>09</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+                            </select>
+                            <select class="input-25">
+                                <option>Year</option>
+                                <option>2018</option>
+                                <option>2017</option>
+                                <option>2016</option>
+                                <option>2015</option>
+                                <option>2014</option>
+                                <option>2013</option>
+                                <option>2010</option>
+                                <option>2009</option>
+                                <option>2008</option>
+                                <option>2007</option>
+                                <option>2006</option>
+                                <option>2005</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-50">
+                            <label>Checkboxes</label>
+                            <div class="checkbox-radio-container">
+                                <input type="checkbox">
+                                <label>Checkbox 1</label>
+                            </div>
+                            <div class="checkbox-radio-container">
+                                <input type="checkbox">
+                                <label>Checkbox 2</label>
+                            </div>
+                            <div class="checkbox-radio-container">
+                                <input type="checkbox">
+                                <label>Checkbox 3</label>
+                            </div>
+                        </div>
+                        <div class="field-50">
+                            <label>Radio Buttons</label>
+                            <div class="checkbox-radio-container">
+                                <input type="radio" name="radio">
+                                <label>Radio Button 1</label>
+                            </div>
+                            <div class="checkbox-radio-container">
+                                <input type="radio" name="radio">
+                                <label>Radio Button 2</label>
+                            </div>
+                            <div class="checkbox-radio-container">
+                                <input type="radio" name="radio">
+                                <label>Radio Button 3</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-100">
+                            <label>Text Area</label>
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <h6 class="underline-color">File Uploads</h6>
+                <fieldset>
+                    <div class="field-row">
+                        <div class="field-50">
+                            <label for="file-upload">File Upload</label>
+                            <input type="file" class="file" id="file-upload">
+                            <label for="file-upload" class="file-upload-label">Select File</label>
+                            <span class="file-upload-name">No file chosen</span>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <h6 class="underline-color">Input Icons</h6>
+                <fieldset>
+                    <div class="field-row">
+                        <div class="field-50">
+                            <label>Text Icon</label>
+                            <span class="field-icon">a</span>
+                            <input type="text">
+                        </div>
+                        <div class="field-50">
+                            <label>Number Icon</label>
+                            <span class="field-icon">#</span>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-50">
+                            <label>Currency Icon</label>
+                            <span class="field-icon">$</span>
+                            <input type="text">
+                        </div>
+                        <div class="field-50">
+                            <label>Percentage Icon</label>
+                            <span class="field-icon">%</span>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-50">
+                            <label>Phone Icon</label>
+                            <span class="field-icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                            <input type="text">
+                        </div>
+                        <div class="field-50">
+                            <label>URL Icon</label>
+                            <span class="field-icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-50">
+                            <label>Email Icon</label>
+                            <span class="field-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                            <input type="text">
+                        </div>
+                        <div class="field-50">
+                            <label>Password Icon</label>
+                            <span class="field-icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                            <input type="password">
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field-50">
+                            <label>Date Icon</label>
+                            <span class="field-icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                            <input type="text">
+                        </div>
+                        <div class="field-50">
+                            <label>Time Icon</label>
+                            <span class="field-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                            <input type="text">
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <h6 class="underline-color">Autocomplete</h6>
+                <fieldset>
+                    <div class="field-row">
+                        <div class="field-50 autocomplete-field" id="autocomplete1">
+                            <input type="text" autocomplete="off">
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <h6 class="underline-color">Autocomplete with Tokens</h6>
+                <fieldset>
+                    <div class="field-row">
+                        <div class="field-50 autocomplete-field token-field" id="autocomplete2">
+                            <input type="text" autocomplete="off">
+                        </div>
+                    </div>
+                </fieldset>
+                
+            </form>
+        </div>
+        
+        <script>
+            $('#autocomplete1, #autocomplete2').setAutocompleteSource([
+                {text: 'Alabama', subtext: '100', id: ''},
+                {text: 'Alaska', subtext: '100', id: ''},
+                {text: 'Arizona', subtext: '100', id: ''},
+                {text: 'Arkansas', subtext: '100', id: ''},
+                {text: 'California', subtext: '100', id: ''},
+                {text: 'Colorado', subtext: '100', id: ''},
+                {text: 'Connecticut', subtext: '100', id: ''},
+                {text: 'Delaware', subtext: '100', id: ''},
+                {text: 'Florida', subtext: '100', id: ''},
+                {text: 'Georgia', subtext: '100', id: ''},
+                {text: 'Hawaii', subtext: '100', id: ''},
+                {text: 'Idaho', subtext: '100', id: ''},
+                {text: 'Illinois', subtext: '100', id: ''},
+                {text: 'Indiana', subtext: '100', id: ''},
+                {text: 'Iowa', subtext: '100', id: ''},
+                {text: 'Kansas', subtext: '100', id: ''},
+                {text: 'Kentucky', subtext: '100', id: ''},
+                {text: 'Louisiana', subtext: '100', id: ''},
+                {text: 'Maine', subtext: '100', id: ''},
+                {text: 'Maryland', subtext: '100', id: ''},
+                {text: 'Massachusetts', subtext: '100', id: ''},
+                {text: 'Michigan', subtext: '100', id: ''},
+                {text: 'Minnesota', subtext: '100', id: ''},
+                {text: 'Mississippi', subtext: '100', id: ''},
+                {text: 'Missouri', subtext: '100', id: ''},
+                {text: 'Montana', subtext: '100', id: ''},
+                {text: 'Nebraska', subtext: '100', id: ''},
+                {text: 'Nevada', subtext: '100', id: ''},
+                {text: 'New Hampshire', subtext: '100', id: ''},
+                {text: 'New Jersey', subtext: '100', id: ''},
+                {text: 'New Mexico', subtext: '100', id: ''},
+                {text: 'New York', subtext: '100', id: ''},
+                {text: 'North Carolina', subtext: '100', id: ''},
+                {text: 'North Dakota', subtext: '100', id: ''},
+                {text: 'Ohio', subtext: '100', id: ''},
+                {text: 'Oklahoma', subtext: '100', id: ''},
+                {text: 'Oregon', subtext: '100', id: ''},
+                {text: 'Pennsylvania', subtext: '100', id: ''},
+                {text: 'Rhode Island', subtext: '100', id: ''},
+                {text: 'South Carolina', subtext: '100', id: ''},
+                {text: 'South Dakota', subtext: '100', id: ''},
+                {text: 'Tennessee', subtext: '100', id: ''},
+                {text: 'Texas', subtext: '100', id: ''},
+                {text: 'Utah', subtext: '100', id: ''},
+                {text: 'Vermont', subtext: '100', id: ''},
+                {text: 'Virginia', subtext: '100', id: ''},
+                {text: 'Washington', subtext: '100', id: ''},
+                {text: 'West Virginia', subtext: '100', id: ''},
+                {text: 'Wisconsin', subtext: '100', id: ''},
+                {text: 'Wyoming', subtext: '100', id: ''}
+            ]);
+        </script>
+        
+    </body>
+    
+</html>

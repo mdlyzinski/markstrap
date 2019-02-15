@@ -1,0 +1,906 @@
+/**************************************** NAV BARS ****************************************/
+
+nav{
+    
+    text-align: left;
+    
+}
+
+// Styles for top navigation
+
+nav.top-nav{
+    
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+    
+    // Styles for nav bar and sub nav bar
+    
+    .nav:not(.with-sub-nav),
+    .sub-nav{
+        
+        box-shadow: $shadow;
+        
+    }
+    
+    .nav,
+    .sub-nav{
+        
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        
+    }
+    
+    // Mobile link container
+    
+    .mobile-menu-top{
+        
+        display: none;
+        z-index: 100;
+        
+    }
+    
+    // Styles for table to horizontally center things
+
+    .nav-table{
+
+        display: inline-table;
+        float: inherit;
+        height: 100%;
+        
+        // Nav link container
+        
+        .nav-links{
+            
+            display: inline-table;
+            height: 100%;
+            
+            &> a,
+            &> button{
+                
+                border-radius: 0px;
+                
+            }
+            
+        }
+
+        // Styles for nav links
+
+        &> a,
+        &> button,
+        .nav-links > a,
+        .nav-links > button,
+        .dropdown > a,
+        .dropdown > button{
+            
+            border-style: solid;
+            border-width: 3px 0px;
+            cursor: pointer;
+            display: table-cell;
+            font-size: 14px;
+            font-weight: bold;
+            height: 100%;
+            padding: 0px 15px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+
+        }
+
+        // Dropdown menu styles
+
+        .dropdown{
+
+            display: inline-table;
+            height: 100%;
+            position: relative;
+            vertical-align: middle;
+            
+            &:hover{
+
+                // Reveal submenu on hover
+
+                &> .submenu{
+
+                    display: block;
+
+                }
+
+                // Show triangle on hover
+
+                &:before,
+                &:after{
+
+                    border-color: white white transparent transparent;
+                    border-style: solid;
+                    border-width: 7px;
+                    bottom: -7px;
+                    content: "";
+                    height: 0px;
+                    position: absolute;
+                    transform: rotateZ(-45deg);
+                    width: 0px;
+                    z-index: 100;
+
+                }
+                
+                // White triangle
+                
+                &:before{
+
+                    z-index: 100;
+
+                }
+                
+                // Shadow for triangle
+                
+                &:after{
+
+                    box-shadow: $shadow-45;
+                    z-index: 80;
+
+                }
+
+            }
+
+            // Styles for link with dropdown
+
+            &> a,
+            &> button{
+
+                &:after{
+
+                    content: "\00a0\00a0\25BE";
+
+                }
+
+            }
+            
+            // Styles for submenu
+
+            &> .submenu{
+
+                background-color: white;
+                border-radius: 2px;
+                box-shadow: $shadow;
+                display: none;
+                padding: 5px;
+                position: absolute;
+                z-index: 90;
+
+                &> a,
+                &> button{
+                    
+                    background-color: transparent;
+                    border: none;
+                    border-radius: 2px;
+                    box-sizing: content-box;
+                    color: $gray-dk4;
+                    cursor: pointer;
+                    display: block;
+                    font-size: 14px;
+                    font-weight: normal;
+                    padding: 12px 20px;
+                    text-align: left;
+                    width: 150px;
+                    
+                    &:hover{
+
+                        background-color: $gray-lt5;
+                        text-decoration: none;
+
+                    }
+
+                }
+
+            }
+
+        }
+        
+        // Styles for menu button
+        
+        .mobile-menu-button{
+            
+            display: none;
+            font-size: 18px;
+            
+        }
+
+        // Styles for website title
+
+        .title{
+
+            font-size: 24px;
+
+        }
+
+        // Sytles for website subtitle
+
+        .subtitle{
+            
+            font-size: 14px;
+
+        }
+        
+        // Styles for search bar within nav bar
+
+        .search-bar{
+            
+            box-sizing: border-box;
+            display: table-cell;
+            height: 100%;
+            padding: 0px 15px;
+            vertical-align: middle;
+            
+            a.button,
+            button,
+            input[type=search]{
+                
+                border: 1px solid $gray-lt2;
+                font-size: 14px;
+                height: 32px;
+
+            }
+
+            input[type=search],
+            &.autocomplete-field .autocomplete-list{
+
+                width: 350px;
+
+            }
+            
+            &.autocomplete-field .autocomplete-list{
+                
+                top: calc(50% + 16px);
+                
+            }
+
+        }
+
+    }
+    
+    // Styles for main nav bar
+    
+    .nav{
+        
+        background-color: $primary-dk4;
+        border-color: $primary-dk4;
+        border-style: solid;
+        border-width: 3px 0px;
+        height: 50px;
+        z-index: 30;
+        
+        .nav-table{
+            
+            // Links on main nav bar
+            
+            &> a,
+            &> button,
+            .nav-links > a,
+            .nav-links > button,
+            .dropdown > a,
+            .dropdown > button{
+                
+                background-color: $primary-dk4;
+                border-color: $primary-dk4;
+                color: white;
+                
+                &:hover{
+                    
+                    background-color: $primary-dk3;
+                    border-color: $primary-dk3;
+                    
+                }
+                
+                &.active{
+                    
+                    border-bottom-color: white;
+                    
+                }
+                
+                // Icons
+                
+                &> i{
+                    color: white;
+                }
+                
+            }
+            
+            // Dropdown menu on main nav bar
+            
+            .dropdown{
+                
+                &> .submenu{
+                    
+                    top: 44px;
+                    
+                }
+                
+            }
+            
+            // Website title and subtitle on main nav bar
+            
+            .subtitle{
+                
+                color: $gray-lt4;
+                
+            }
+            
+            .title:hover,
+            .subtitle:hover{
+
+                background-color: $primary-dk4;
+                border-color: $primary-dk4;
+
+            }
+            
+        }
+        
+    }
+    
+    // Styles for sub nav bar
+    
+    .sub-nav{
+        
+        background-color: white;
+        height: 40px;
+        z-index: 20;
+        
+        .nav-table{
+            
+            // Links on sub nav bar
+            
+            &> a,
+            &> button,
+            .nav-links > a,
+            .nav-links > button,
+            .dropdown > a,
+            .dropdown > button{
+                
+                background-color: white;
+                border-color: white;
+                color: $gray-dk4;
+                
+                &:hover{
+                    
+                    background-color: $gray-lt5;
+                    border-color: $gray-lt5;
+                    
+                }
+                
+                &.active{
+                    
+                    border-bottom-color: $gray;
+                    
+                }
+                
+            }
+            
+            // Dropdown menu on sub nav bar
+            
+            .dropdown{
+                
+                &> .submenu{
+                    
+                    top: 40px;
+                    
+                }
+                
+            }
+            
+            // Website title and subtitle on sub nav bar
+            
+            .subtitle{
+                
+                color: $gray-dk3;
+                
+            }
+            
+            .title:hover,
+            .subtitle:hover{
+
+                background-color: white;
+                border-color: white;
+
+            }
+            
+        }
+        
+    }
+    
+    // Styles for left and right sides of bar
+    
+    .nav-left,
+    .nav-right{
+        
+        display: inline-block;
+        height: 100%;
+        
+    }
+    
+    // Float things on left side to left
+    
+    .nav-left{
+        
+        float: left;
+        
+        .dropdown:hover{
+            
+            &:before,
+            &:after{
+                
+                left: calc(50% - 6px);
+                
+            }
+            
+        }
+        
+        .submenu{
+
+            left: -2px;
+
+        }
+        
+    }
+    
+    // Float things on right side to right
+    
+    .nav-right{
+        
+        float: right;
+        
+        .dropdown:hover{
+            
+            &:before,
+            &:after{
+                
+                right: calc(50% - 6px);
+                
+            }
+            
+        }
+        
+        .submenu{
+
+            right: -2px;
+
+        }
+        
+    }
+    
+}
+
+// Displace content by height of nav
+
+.nav-space-1{
+    
+    height: 50px;
+    
+}
+
+// Displace content by height of nav and sub-nav
+
+.nav-space-2{
+    
+    height: 90px;
+    
+}
+
+// Styles for bottom navigation for mobile
+
+nav.bottom-nav{
+    
+    bottom: 0px;
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 900;
+    
+    // Container for links/buttons
+    
+    .mobile-menu-bottom{
+        
+        font-size: 0px;
+        width: 100%;
+        z-index: 100;
+        
+        a,
+        button{
+            
+            background-color: $primary-dk4;
+            border: none;
+            border-radius: 0px;
+            box-sizing: border-box;
+            color: white;
+            display: inline-block;
+            font-size: 20px;
+            height: 40px;
+            line-height: 40px;
+            padding: 0px;
+            text-align: center;
+            vertical-align: middle;
+            
+            .fa{
+                
+                line-height: 40px !important;
+                
+            }
+            
+            &.link-20{
+                
+                width: calc(100% / 5);
+                
+            }
+            
+            &.link-25{
+                
+                width: calc(100% / 4);
+                
+            }
+            
+            &.link-33{
+                
+                width: calc(100% / 3);
+                
+            }
+            
+            &.link-50{
+                
+                width: calc(100% / 2);
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+// General styles for search bar
+
+.search-bar{
+    
+    a.button,
+    button,
+    input[type=search],
+    .autocomplete-list{
+        
+        border: 1px solid $gray-lt2;
+        color: $gray-dk4;
+        float: left;
+        
+    }
+    
+    a.button,
+    button{
+        
+        background-color: $gray-lt4;
+        border-bottom-left-radius: 0px;
+        border-left-width: 0px;
+        border-top-left-radius: 0px;
+        border-radius: 0px 2px 2px 0px;
+        width: 60px;
+        
+        &:hover{
+            
+            background-color: $gray-lt3;
+            
+        }
+        
+    }
+    
+    input[type=search]{
+        
+        -webkit-appearance: textfield;
+        border-bottom-right-radius: 0px;
+        border-right-width: 0px;
+        border-top-right-radius: 0px;
+        
+    }
+    
+}
+
+
+
+/**************************************** MOBILE ****************************************/
+
+// Phone landscape and smaller
+
+@media only screen and (max-width: 480px){
+    
+    nav.bottom-nav{
+        
+        display: block;
+        
+    }
+    
+}
+
+// Breakpoint with 5 tabs
+
+@media only screen and (max-width: 1000px){
+    
+    nav.top-nav{
+        
+        .nav{
+            
+            height: auto;
+            
+        }
+        
+        // Hide sub nav
+        
+        .sub-nav{
+            
+            display: none;
+            
+        }
+        
+        // Stretch containers to width of screen
+        
+        .nav-left,
+        .nav-right{
+            
+            float: none;
+            height: 35px;
+            width: 100%;
+            
+        }
+        
+        .nav-table{
+            
+            width: 100%;
+            
+            .mobile-menu-button,
+            .title,
+            .search-bar{
+                
+                line-height: 29px;
+                
+            }
+            
+            .mobile-menu-button,
+            .title{
+                
+                padding: 0px 20px;
+                
+            }
+            
+            // Styles for button to open mobile menu
+            
+            .mobile-menu-button{
+                
+                display: table-cell;
+                float: right;
+                width: auto;
+                
+            }
+            
+            .title{
+                
+                display: inline-block;
+                font-size: 18px;
+                text-align: left;
+                
+            }
+            
+            .subtitle{
+                
+                display: none;
+                
+            }
+            
+            // Put search bar on new line and stretch to width of screen
+            
+            .search-bar{
+                
+                display: block;
+                padding: 0px 10px;
+                width: 100%;
+                
+                input[type=search]{
+                
+                    width: calc(100% - 40px);
+                
+                }
+                
+                &.autocomplete-field .autocomplete-list{
+                    
+                    top: calc(50% - 2px);
+                    width: calc(100% - 60px);
+                    
+                }
+                
+                a.button,
+                button{
+                    
+                    padding: 0px;
+                    width: 40px;
+                    
+                }
+                
+            }
+            
+            // Hide nav links that are not mobile nav links
+            
+            .nav-links{
+                
+                display: none;
+                
+            }
+            
+        }
+        
+        // Styles for container for mobile menu
+        
+        .mobile-menu-top{
+            
+            background-color: $overlay;
+            display: none;
+            height: 100vh;
+            position: absolute;
+            left: 0px;
+            overflow: scroll;
+            top: 0px;
+            width: 100vw;
+            
+            // Styles for mobile nav link container
+            
+            .mobile-nav-links{
+                
+                background-color: $gray-dk4 !important;
+                box-shadow: $shadow !important;
+                height: 100% !important;
+                max-width: 300px !important;
+                position: absolute !important;
+                right: 0px !important;
+                width: 100% !important;
+                
+                // Styles for links/buttons
+                
+                &> a,
+                &> button,
+                .dropdown > a,
+                .dropdown > button,
+                .submenu > a,
+                .submenu > button{
+                    
+                    border-style: solid !important;
+                    border-width: 0px 0px 1px 0px !important;
+                    box-sizing: border-box !important;
+                    color: white !important;
+                    display: block !important;
+                    font-size: 18px !important;
+                    height: auto !important;
+                    text-align: left !important;
+                    width: 100% !important;
+                    
+                    &:active,
+                    &:hover{
+                        
+                        box-sizing: border-box !important;
+                        text-decoration: none !important;
+                        
+                    }
+                    
+                }
+                
+                // Styles for main links/buttons
+                
+                &> a,
+                &> button,
+                .dropdown > a,
+                .dropdown > button{
+                    
+                    background-color: $gray-dk4 !important;
+                    border-color: $gray-dk2 !important;
+                    font-weight: bold !important;
+                    padding: 15px 20px !important;
+                    
+                    &.active{
+                        
+                        background-color: $primary-dk2 !important;
+                        
+                    }
+                    
+                }
+                
+                // Styles for dropdown links/buttons
+                
+                .submenu > a,
+                .submenu > button{
+                    
+                    background-color: $gray-dk3 !important;
+                    border-color: $gray-dk1 !important;
+                    border-radius: 0px !important;
+                    font-weight: normal !important;
+                    padding: 15px 20px 15px 40px !important;
+                    
+                    &.active{
+                        
+                        background-color: $primary-dk2 !important;
+                        
+                    }
+                    
+                }
+                
+                // Styles for exit button
+                
+                &> button.exit{
+                    
+                    text-align: right !important;
+                    
+                }
+                
+                // Styles for dropdown menu
+                
+                .dropdown{
+                    
+                    display: block !important;
+                    height: auto !important;
+                    
+                    &> a,
+                    &> button{
+                        
+                        &:after{
+                            
+                            content: "\00a0\00a0\25BE";
+                            
+                        }
+                        
+                    }
+                    
+                    .submenu{
+                        
+                        border-radius: 0px !important;
+                        box-shadow: none !important;
+                        display: none !important;
+                        padding: 0px !important;
+                        position: static !important;
+                        width: 100% !important;
+                        
+                    }
+                    
+                    &:active,
+                    &:hover{
+                        
+                        &:before,
+                        &:after{
+                            
+                            display: none !important;
+                            
+                        }
+                        
+                        &> .submenu{
+                            
+                            display: block !important;
+                            
+                        }
+                        
+                    }
+                    
+                    a.active + .submenu{
+                        
+                        display: block !important;
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+    .nav-space-1,
+    .nav-space-2{
+        
+        height: 76px;
+        
+    }
+    
+}

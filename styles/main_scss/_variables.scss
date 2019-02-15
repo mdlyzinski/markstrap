@@ -1,0 +1,137 @@
+/**************************************** COLORS ****************************************/
+
+$hue: 165;
+
+$primary-lt5: hsl($hue, 70%, 95%);
+$primary-lt4: hsl($hue, 70%, 90%);
+$primary-lt3: hsl($hue, 70%, 80%);
+$primary-lt2: hsl($hue, 70%, 70%);
+$primary-lt1: hsl($hue, 70%, 60%);
+$primary: hsl($hue, 70%, 50%);
+$primary-dk1: hsl($hue, 80%, 40%);
+$primary-dk2: hsl($hue, 90%, 30%);
+$primary-dk3: hsl($hue, 90%, 25%);
+$primary-dk4: hsl($hue, 100%, 20%);
+$primary-dk5: hsl($hue, 100%, 10%);
+
+$gray-lt5: hsl(0, 0%, 95%);
+$gray-lt4: hsl(0, 0%, 90%);
+$gray-lt3: hsl(0, 0%, 80%);
+$gray-lt2: hsl(0, 0%, 70%);
+$gray-lt1: hsl(0, 0%, 60%);
+$gray: hsl(0, 0%, 50%);
+$gray-dk1: hsl(0, 0%, 40%);
+$gray-dk2: hsl(0, 0%, 30%);
+$gray-dk3: hsl(0, 0%, 20%);
+$gray-dk4: hsl(0, 0%, 10%);
+$gray-dk5: hsl(0, 0%, 5%);
+
+$red-lt2: hsl(0, 100%, 95%);
+$red-lt1: hsl(0, 100%, 75%);
+$red: hsl(0, 100%, 50%);
+$red-dk1: hsl(0, 100%, 40%);
+$red-dk2: hsl(0, 100%, 30%);
+
+$yellow-lt2: hsl(45, 100%, 95%);
+$yellow-lt1: hsl(45, 100%, 75%);
+$yellow: hsl(45, 100%, 50%);
+$yellow-dk1: hsl(45, 100%, 45%);
+$yellow-dk2: hsl(45, 100%, 40%);
+
+$green-lt2: hsl(145, 100%, 95%);
+$green-lt1: hsl(145, 100%, 75%);
+$green: hsl(145, 100%, 50%);
+$green-dk1: hsl(145, 100%, 40%);
+$green-dk2: hsl(145, 100%, 30%);
+
+$blue-lt2: hsl(220, 100%, 95%);
+$blue-lt1: hsl(220, 100%, 75%);
+$blue: hsl(220, 100%, 50%);
+$blue-dk1: hsl(220, 100%, 40%);
+$blue-dk2: hsl(220, 100%, 30%);
+
+$overlay: rgba(0, 0, 0, 0.6);
+
+
+
+/**************************************** FONTS ****************************************/
+
+/* Serif */
+$georgia: Georgia, serif;
+$times: "Times New Roman", Times, serif;
+
+/* Sans Serif */
+$arial: Arial, Helvetica, sans-serif;
+$impact: Impact, Charcoal, sans-serif;
+$tahoma: Tahoma, Geneva, sans-serif;
+$verdana: Verdana, Geneva, sans-serif;
+
+/* Monospace */
+$courier: "Courier New", Courier, monospace;
+
+
+
+/**************************************** SHADOWS ****************************************/
+
+$shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+$shadow-45: -1px 1px 8px rgba(0, 0, 0, 0.4);
+
+
+
+/**************************************** TEST CLASSES ****************************************/
+
+.primary-lt5-test{background-color: $primary-lt5; display: inline-block; float: left; padding: 5px 25px;}
+.primary-lt4-test{background-color: $primary-lt4; display: inline-block; float: left; padding: 5px 25px;}
+.primary-lt3-test{background-color: $primary-lt3; display: inline-block; float: left; padding: 5px 25px;}
+.primary-lt2-test{background-color: $primary-lt2; display: inline-block; float: left; padding: 5px 25px;}
+.primary-lt1-test{background-color: $primary-lt1; display: inline-block; float: left; padding: 5px 25px;}
+.primary-test{background-color: $primary; display: inline-block; float: left; padding: 5px 25px;}
+.primary-dk1-test{background-color: $primary-dk1; display: inline-block; float: left; padding: 5px 25px;}
+.primary-dk2-test{background-color: $primary-dk2; display: inline-block; float: left; padding: 5px 25px;}
+.primary-dk3-test{background-color: $primary-dk3; display: inline-block; float: left; padding: 5px 25px;}
+.primary-dk4-test{background-color: $primary-dk4; display: inline-block; float: left; padding: 5px 25px;}
+.primary-dk5-test{background-color: $primary-dk5; display: inline-block; float: left; padding: 5px 25px;}
+
+.gray-lt5-test{background-color: $gray-lt5; display: inline-block; float: left; padding: 5px 25px;}
+.gray-lt4-test{background-color: $gray-lt4; display: inline-block; float: left; padding: 5px 25px;}
+.gray-lt3-test{background-color: $gray-lt3; display: inline-block; float: left; padding: 5px 25px;}
+.gray-lt2-test{background-color: $gray-lt2; display: inline-block; float: left; padding: 5px 25px;}
+.gray-lt1-test{background-color: $gray-lt1; display: inline-block; float: left; padding: 5px 25px;}
+.gray-test{background-color: $gray; display: inline-block; float: left; padding: 5px 25px;}
+.gray-dk1-test{background-color: $gray-dk1; display: inline-block; float: left; padding: 5px 25px;}
+.gray-dk2-test{background-color: $gray-dk2; display: inline-block; float: left; padding: 5px 25px;}
+.gray-dk3-test{background-color: $gray-dk3; display: inline-block; float: left; padding: 5px 25px;}
+.gray-dk4-test{background-color: $gray-dk4; display: inline-block; float: left; padding: 5px 25px;}
+.gray-dk5-test{background-color: $gray-dk5; display: inline-block; float: left; padding: 5px 25px;}
+
+.red-lt2-test{background-color: $red-lt2; display: inline-block; float: left; padding: 5px 25px;}
+.red-lt1-test{background-color: $red-lt1; display: inline-block; float: left; padding: 5px 25px;}
+.red-test{background-color: $red; display: inline-block; float: left; padding: 5px 25px;}
+.red-dk1-test{background-color: $red-dk1; display: inline-block; float: left; padding: 5px 25px;}
+.red-dk2-test{background-color: $red-dk2; display: inline-block; float: left; padding: 5px 25px;}
+
+.yellow-lt2-test{background-color: $yellow-lt2; display: inline-block; float: left; padding: 5px 25px;}
+.yellow-lt1-test{background-color: $yellow-lt1; display: inline-block; float: left; padding: 5px 25px;}
+.yellow-test{background-color: $yellow; display: inline-block; float: left; padding: 5px 25px;}
+.yellow-dk1-test{background-color: $yellow-dk1; display: inline-block; float: left; padding: 5px 25px;}
+.yellow-dk2-test{background-color: $yellow-dk2; display: inline-block; float: left; padding: 5px 25px;}
+
+.green-lt2-test{background-color: $green-lt2; display: inline-block; float: left; padding: 5px 25px;}
+.green-lt1-test{background-color: $green-lt1; display: inline-block; float: left; padding: 5px 25px;}
+.green-test{background-color: $green; display: inline-block; float: left; padding: 5px 25px;}
+.green-dk1-test{background-color: $green-dk1; display: inline-block; float: left; padding: 5px 25px;}
+.green-dk2-test{background-color: $green-dk2; display: inline-block; float: left; padding: 5px 25px;}
+
+.blue-lt2-test{background-color: $blue-lt2; display: inline-block; float: left; padding: 5px 25px;}
+.blue-lt1-test{background-color: $blue-lt1; display: inline-block; float: left; padding: 5px 25px;}
+.blue-test{background-color: $blue; display: inline-block; float: left; padding: 5px 25px;}
+.blue-dk1-test{background-color: $blue-dk1; display: inline-block; float: left; padding: 5px 25px;}
+.blue-dk2-test{background-color: $blue-dk2; display: inline-block; float: left; padding: 5px 25px;}
+
+.georgia-test{font-family: $georgia; font-size: 20px;}
+.times-test{font-family: $times; font-size: 20px;}
+.arial-test{font-family: $arial; font-size: 20px;}
+.impact-test{font-family: $impact; font-size: 20px;}
+.tahoma-test{font-family: $tahoma; font-size: 20px;}
+.verdana-test{font-family: $verdana; font-size: 20px;}
+.courier-test{font-family: $courier; font-size: 20px;}
